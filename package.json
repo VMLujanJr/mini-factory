@@ -1,0 +1,53 @@
+{
+  "name": "mini-factory",
+  "version": "1.0.0",
+  "description": "1. Create __feature branches__ by pulling from the most up-to-date `develop` branch. 2. Merge *functional* __feature branches__ to `develop` branch (no broken code). 3. Add __simple comments__, keep it short. 4. Work in __Live Share__ whenever possible to avoid __merge conflicts__. 5. If your code is broken, __STOP__, attempt to remedy the situation *and* __DO NOT__ merge or push your code to the repository until it is resolved.",
+  "main": "server/server.js",
+  "dependencies": {
+    "ansi-regex": "^5.0.1",
+    "ansi-styles": "^4.3.0",
+    "chalk": "^4.1.2",
+    "cliui": "^7.0.4",
+    "color-convert": "^2.0.1",
+    "color-name": "^1.1.4",
+    "concurrently": "^7.3.0",
+    "date-fns": "^2.29.1",
+    "emoji-regex": "^8.0.0",
+    "escalade": "^3.1.1",
+    "get-caller-file": "^2.0.5",
+    "has-flag": "^4.0.0",
+    "is-fullwidth-code-point": "^3.0.0",
+    "lodash": "^4.17.21",
+    "require-directory": "^2.1.1",
+    "rxjs": "^7.5.6",
+    "shell-quote": "^1.7.3",
+    "spawn-command": "^0.0.2-1",
+    "string-width": "^4.2.3",
+    "strip-ansi": "^6.0.1",
+    "supports-color": "^8.1.1",
+    "tree-kill": "^1.2.2",
+    "tslib": "^2.4.0",
+    "wrap-ansi": "^7.0.0",
+    "y18n": "^5.0.8",
+    "yargs": "^17.5.1",
+    "yargs-parser": "^21.0.1"
+  },
+  "scripts": {
+    "start": "node server/server.js",
+    "develop": "concurrently \"cd server && npm run watch\" \"cd client && npm start\"",
+    "install": "cd server && npm i && cd ../client && npm i",
+    "seed": "cd server && npm run seed",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/VMLujanJr/mini-factory.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/VMLujanJr/mini-factory/issues"
+  },
+  "homepage": "https://github.com/VMLujanJr/mini-factory#readme"
+}
