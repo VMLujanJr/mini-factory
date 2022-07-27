@@ -27,8 +27,10 @@ const typeDefs = gql`
 
     type Comment {
         _id: ID
-        username: String
         commentBody: String
+        createdAt: string
+        username: String
+       
     }
 
     type Query {
@@ -38,7 +40,6 @@ const typeDefs = gql`
         comments(username: String): [Comment]
         comment(_id: ID!): Comment
     }
-
 
 
     type Mutation {
