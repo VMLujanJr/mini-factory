@@ -25,6 +25,14 @@ const typeDefs = gql`
         friends: [User]
     }
 
+    type Comment {
+        _id: ID
+        commentBody: String
+        createdAt: string
+        username: String
+       
+    }
+
     type Query {
         me: User
         users: [User]
@@ -32,6 +40,7 @@ const typeDefs = gql`
         comments(username: String): [Comment]
         comment(_id: ID!): Comment
     }
+
 
     type Mutation {
         login(email: String!, password: String!): Auth
