@@ -1,3 +1,7 @@
+import React from "react"
+
+const Footer = () => {
+  return (
 <footer class="text-center lg:text-left bg-#116466 text-gray-600">
   <div class="flex justify-center items-center lg:justify-between p-6 border-b border-gray-300">
    </div>
@@ -113,3 +117,8 @@
     <a class="text-gray-600 font-semibold" href="https://tailwind-elements.com/">Tailwind Elements</a>
   </div>
 </footer>
+
+  )
+}
+
+export default Footer;

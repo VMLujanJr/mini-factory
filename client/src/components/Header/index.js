@@ -2,23 +2,22 @@ import React from "react"
 
 
 
-<nav class="">
-<p>Icon goes here </p>
-<section>
-        <h1>
-            <a href="/" role="button">Title</a>
-        </h1>
-        
-        
-        <a class="" href="/">Dashboard</a>
+const Header = () => {
+    return (
 
-        <a role="button" class="" href="/">Home</a>
-       
-        <a role="button" class="" href="/" id="">holder</a>
-        
-        <a role="button" class="" href="/">holder</a>
-        
-      
-</section>
 
-    </nav>
+        <nav class="">
+            <p>Icon goes here </p>
+            <section>
+                <h1>
+                    <a href="/" role="button">Title</a>
+                    </h1>
+                    <h3>Welcome To The </h3>
+
+            </section>
+
+        </nav>
+    )
+}
+
+export default Header;
