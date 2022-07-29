@@ -8,7 +8,6 @@ const { typeDefs, resolvers } = require("./schemas");
 //DB locale
 const { authMiddleware } = require('./utils/auth');
 const db = require("./config/connection");
-
 //This is server location FOR NOW, will see with further deployment
 const PORT = process.env.PORT || 3001;
 // creates Apollo server and passes schemas
@@ -20,7 +19,7 @@ const server = new ApolloServer({
 
 const app = express();
 
-app.use(express.urlencoded({ extended:false }));
+app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 
 //app.get potentially if client server handshake issue
