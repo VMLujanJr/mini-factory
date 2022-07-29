@@ -24,7 +24,8 @@ module.exports = {
     
     fontFamily:{
       gothic: 'century-gothic, sans-serif',
-      default: 'montserrat, sans-serif'
+      default: 'montserrat, sans-serif',
+      
     },
   },
   plugins: [
