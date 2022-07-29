@@ -1,15 +1,20 @@
 import React from 'react';
-import Header from './components/Header';
-import Footer from './components/Footer';
-import Home from './pages/Home.js';
-import { ApolloProvider, ApolloClient, InMemoryCache, createHttpLink } from '@apollo/client';
+import { BrowserRouter as Router } from 'react-router-dom'; // Routes // Route
+import { 
+  ApolloProvider, 
+  ApolloClient, 
+  InMemoryCache, 
+  createHttpLink 
+} from '@apollo/client';
 import { setContext } from '@apollo/client/link/context';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Login from './pages/Login.js';
-import NoMatch from './pages/NoMatch';
-import SingleComment from './pages/SingleComment.js';
-import Profile from './pages/Profile.js';
-import Signup from './pages/Signup.js';
+import Header from './components/Header';
+// import Footer from './components/Footer';
+// import Home from './pages/Home.js';
+// import Login from './pages/Login.js';
+// import NoMatch from './pages/NoMatch';
+// import SingleComment from './pages/SingleComment.js';
+// import Profile from './pages/Profile.js';
+// import Signup from './pages/Signup.js';
 
 const httpLink = createHttpLink({
   uri: '/graphql',
@@ -24,6 +29,7 @@ const authLink = setContext((_, { headers }) => {
     },
   };
 });
+
 const client = new ApolloClient({
   link: authLink.concat(httpLink),
   cache: new InMemoryCache()
@@ -31,12 +37,12 @@ const client = new ApolloClient({
 
 function App() {
   return (
-    <ApolloClient client={ client }>
+    <ApolloProvider client={ client }>
       <Router>
         <div className=''>
           <Header />
           <div className=''>
-            <Routes>
+            {/* <Routes>
               <Route
                 path='/'
                 element={ <Home /> }
@@ -61,11 +67,11 @@ function App() {
                 path='*'
                 element={ <NoMatch /> }
               />
-            </Routes>
+            </Routes> */}
           </div>
         </div>
       </Router>
-    </ApolloClient>
+    </ApolloProvider>
   );
 };
 
