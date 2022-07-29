@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router } from 'react-router-dom'; // Routes // Route
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { 
   ApolloProvider, 
   ApolloClient, 
@@ -7,14 +7,15 @@ import {
   createHttpLink 
 } from '@apollo/client';
 import { setContext } from '@apollo/client/link/context';
-import Header from './components/Header';
-// import Footer from './components/Footer';
-// import Home from './pages/Home.js';
-// import Login from './pages/Login.js';
-// import NoMatch from './pages/NoMatch';
-// import SingleComment from './pages/SingleComment.js';
-// import Profile from './pages/Profile.js';
-// import Signup from './pages/Signup.js';
+
+ import Header from './components/Header';
+ import Footer from './components/Footer';
+ import Home from './pages/Home.js';
+ import Login from './pages/Login.js';
+ import NoMatch from './pages/NoMatch';
+ import SingleComment from './pages/SingleComment.js';
+ import Profile from './pages/Profile.js';
+ import Signup from './pages/Signup.js';
 
 const httpLink = createHttpLink({
   uri: '/graphql',
@@ -38,11 +39,11 @@ const client = new ApolloClient({
 function App() {
   return (
     <ApolloProvider client={ client }>
-      <Router>
+      {<Router>
         <div className=''>
           <Header />
           <div className=''>
-            {/* <Routes>
+            <Routes>
               <Route
                 path='/'
                 element={ <Home /> }
@@ -67,10 +68,10 @@ function App() {
                 path='*'
                 element={ <NoMatch /> }
               />
-            </Routes> */}
+            </Routes>
           </div>
         </div>
-      </Router>
+      </Router>}
     </ApolloProvider>
   );
 };
