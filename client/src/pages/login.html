@@ -6,37 +6,61 @@
   <link rel="icon" href="" />
   <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+</head>
 
+<body>
 
-<main className="flex-row justify-center mb-4">
-    <div className="col-12 col-md-6">
-      <div className="card">
-        <h4 className="card-header">Login</h4>
-        <div className="card-body">
-          <form onSubmit={handleFormSubmit}>
-            <input
-              className="form-input"
-              placeholder="Your email"
-              name="email"
-              type="email"
-              id="email"
-              value={formState.email}
-              onChange={handleChange}
-            />
-            <input
-              className="form-input"
-              placeholder="******"
-              name="password"
-              type="password"
-              id="password"
-              value={formState.password}
-              onChange={handleChange}
-            />
-            <button className="btn d-block w-100" type="submit">
-              Submit
-            </button>
-          </form>
-        </div>
-      </div>
+  <main
+  class="mx-auto flex min-h-screen w-full items-center justify-center bg-slate-200 text-black"
+>
+  <!-- component -->
+  <section class="flex w-[30rem] flex-col space-y-10">
+    <div class="text-center text-4xl font-medium">Log In</div>
+
+    <div
+      class="w-full transform border-b-2 bg-transparent text-lg duration-300 focus-within:border-indigo-500"
+    >
+      <input
+        type="text"
+        placeholder="Email or Username"
+        class="w-full border-none bg-transparent outline-none placeholder:italic focus:outline-none"
+      />
     </div>
-  </main>
+
+    <div
+      class="w-full transform border-b-2 bg-transparent text-lg duration-300 focus-within:border-indigo-500"
+    >
+      <input
+        type="password"
+        placeholder="Password"
+        class="w-full border-none bg-transparent outline-none placeholder:italic focus:outline-none"
+      />
+    </div>
+
+    <button
+      class="transform rounded-sm bg-indigo-600 py-2 font-bold duration-300 hover:bg-blue-400"
+    >
+      LOG IN
+    </button>
+
+    <a
+      href="#"
+      class="transform text-center font-semibold text-gray-700 duration-300 hover:text-gray-300"
+      >FORGOT PASSWORD?</a
+    >
+
+    <p class="text-center text-lg">
+      No account?
+      <a
+        href="#"
+        class="font-medium text-indigo-500 underline-offset-4 hover:underline"
+        >Create One</a
+      >
+    </p>
+  </section>
+</main>
+
+</body>
+
+<a href="../pages/home.html"></a>
