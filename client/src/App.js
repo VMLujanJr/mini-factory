@@ -1,22 +1,22 @@
-import React, { useState } from 'react';
-import Gallery from "./components/Gallery";
+import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { 
-  ApolloProvider, 
-  ApolloClient, 
-  InMemoryCache, 
-  createHttpLink 
+import {
+  ApolloProvider,
+  ApolloClient,
+  InMemoryCache,
+  createHttpLink
 } from '@apollo/client';
 import { setContext } from '@apollo/client/link/context';
 
- import Header from './components/Header';
- import Footer from './components/Footer';
- import Home from './pages/Home.js';
- import Login from './pages/Login.js';
- import NoMatch from './pages/NoMatch';
- import SingleComment from './pages/SingleComment.js';
- import Profile from './pages/Profile.js';
- import Signup from './pages/Signup.js';
+import Header from './components/Header';
+import Footer from './components/Footer';
+
+import Home from './pages/Home.js';
+import Login from './pages/Login.js';
+import NoMatch from './pages/NoMatch';
+import SingleComment from './pages/SingleComment.js';
+import Profile from './pages/Profile.js';
+import Signup from './pages/Signup.js';
 
 const httpLink = createHttpLink({
   uri: '/graphql',
@@ -27,7 +27,7 @@ const authLink = setContext((_, { headers }) => {
   return {
     headers: {
       ...headers,
-      authorization: token ? `Bearer ${ token }` : '',
+      authorization: token ? `Bearer ${token}` : '',
     },
   };
 });
@@ -38,24 +38,8 @@ const client = new ApolloClient({
 });
 
 function App() {
-  const [categories] = useState([
-    {
-      name: 'large',
-      description: 'Photos of large creatures'
-    },
-    {
-      name: 'medium',
-      description: 'Photos of medium creatures'
-    },
-    {
-      name: 'small',
-      description: 'Photos of small creatures'
-    }
-  ]);
-  const [currentCategory, setCurrentCategory] = useState(categories[0]);
-
   return (
-    <ApolloProvider client={ client }>
+    <ApolloProvider client={client}>
       {<Router>
         <div className='flex-column justify-flex-start min-100-vh'>
           <Header />
@@ -63,31 +47,31 @@ function App() {
             <Routes>
               <Route
                 path='/'
-                element={ <Home /> }
+                element={<Home />}
               />
               <Route
                 path='/login'
-                element={ <Login /> }
+                element={<Login />}
               />
-              <Route 
+              <Route
                 path='/signup'
-                element={ <Signup />}
+                element={<Signup />}
               />
               <Route path='/profile'>
-                <Route path=':username' element={ <Profile />} />
-                <Route path='' element={ <Profile/> } />
+                <Route path=':username' element={<Profile />} />
+                <Route path='' element={<Profile />} />
               </Route>
               <Route
                 path='/comment/:id'
-                element={ <SingleComment /> }
+                element={<SingleComment />}
               />
               <Route
                 path='*'
-                element={ <NoMatch /> }
+                element={<NoMatch />}
               />
             </Routes>
           </div>
-          <Footer/>
+          <Footer />
         </div>
       </Router>}
     </ApolloProvider>
