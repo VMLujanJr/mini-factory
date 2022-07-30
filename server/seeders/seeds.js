@@ -1,9 +1,10 @@
 const faker = require('faker');
 const db = require('../config/connection.js');
-const { User, Comment } = require('../models');
+const { User, Comment, Product } = require('../models');
 
 db.once('open', async () => {
     await Comment.deleteMany({});
+    await Product.deleteMany({});
     await User.deleteMany({});
 
     // holds user data
@@ -20,6 +21,28 @@ db.once('open', async () => {
 
     // assigns newly created user data to User model.
     const createdUsers = await User.collection.insertMany(userData);
+
+    // holds product data
+    const productData = [];
+
+    // size categories
+    const sizeCategories = [
+        'small',
+        'medium',
+        'large'
+    ]
+    // creates 50 products w/ random names, sizecategories, and prices
+    for (let i = 0; i < 50; i += 1) {
+        const productName = faker.commerce.productName();
+        const sizeCategory = sizeCategories[Math.random() * sizeCategories.length + 1];
+        const price = faker.commerce.price(dec = 2);
+        console.log(price);
+
+        productData.push({ productName, sizeCategory, price });
+    }
+
+    // assigns newly created product data to Product model
+    const createdProducts = await Product.collection.insertMany(productData);
 
     // create friends
     for (let i = 0; i < 100; i += 1) {
@@ -56,8 +79,8 @@ db.once('open', async () => {
         const replyBody = faker.lorem.words(Math.round(Math.random() * 20) + 1);
         const randomUserIndex = Math.floor(Math.random() * createdUsers.ops.length);
         const { username } = createdUsers.ops[randomUserIndex];
-        const randomReplyIndex = Math.floor(Math.random() * createdReplies.length);
-        const { _id: replyId } = createdReplies[randomReplyIndex];
+        const randomReplyIndex = Math.floor(Math.random() * createdComments.length);
+        const { _id: replyId } = createdComments[randomReplyIndex];
         
         await Comment.updateOne(
             { _id: replyId },

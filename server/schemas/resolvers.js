@@ -1,4 +1,4 @@
-const { User, Comment } = require("../models");
+const { User, Comment, Product } = require("../models");
 const { AuthenticationError } = require("apollo-server-express");
 const { signToken } = require("../utils/auth.js");
 
@@ -34,6 +34,12 @@ const resolvers = {
     },
     comment: async (parent, { _id }) => {
       return Comment.findOne({ _id });
+    },
+    products: async () => {
+      const products = await Product.find()
+      .select("-__v");
+      products.forEach(product => console.log("PRODUCT", product))
+      return products
     },
   },
 

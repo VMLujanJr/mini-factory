@@ -4,9 +4,10 @@ const dateFormat = require("../utils/dateFormat");
 
 const commentSchema = new Schema(
   {
-    commentBody: {
+    commentText: {
       type: String,
       required: "Leave a comment to let us know what you think!",
+      minlength: 1,
       maxlength: 280,
     },
     createdAt: {
