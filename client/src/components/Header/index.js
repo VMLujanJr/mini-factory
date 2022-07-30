@@ -12,7 +12,7 @@ const Header = () => {
                 <h1>
                     <a href="/" role="button">Title</a>
                     </h1>
-                    <h3>Welcome To The </h3>
+                    <h3>Welcome To The Mini Factroy</h3>
 
             </section>
 
