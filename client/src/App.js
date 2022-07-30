@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useState } from 'react';
+import Gallery from "./components/Gallery";
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { 
   ApolloProvider, 
@@ -37,10 +38,26 @@ const client = new ApolloClient({
 });
 
 function App() {
+  const [categories] = useState([
+    {
+      name: 'large',
+      description: 'Photos of large creatures'
+    },
+    {
+      name: 'medium',
+      description: 'Photos of medium creatures'
+    },
+    {
+      name: 'small',
+      description: 'Photos of small creatures'
+    }
+  ]);
+  const [currentCategory, setCurrentCategory] = useState(categories[0]);
+
   return (
     <ApolloProvider client={ client }>
       {<Router>
-        <div className=''>
+        <div className='flex-column justify-flex-start min-100-vh'>
           <Header />
           <div className=''>
             <Routes>
@@ -70,6 +87,7 @@ function App() {
               />
             </Routes>
           </div>
+          <Footer/>
         </div>
       </Router>}
     </ApolloProvider>
