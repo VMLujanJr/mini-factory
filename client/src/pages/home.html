@@ -4,7 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet"> 
+    <link href="home.css" rel="homestylesheet">
     <title>Miniatures</title>
 </head>
 <body>
@@ -37,70 +38,122 @@
             </div>
           </nav>
         </header>
-        <section id="#home" class="overflow-hidden text-gray-700 ">
-            <div class="gap-8 columns-2">
-                <div class="gap-8 columns-2 m-1">
-                    <div class="w-64 py-px-1 px-px lg:p-4">
-                    <img alt="gallery" class="object-center w-64 h-64 rounded-lg"
-                  src="../assets/blue-dragon-mini-front.jpg">
+
+        <main class="container mx-auto md:container md:mx-auto grid md:grid-cols-2 md:auto-cols-max grid-cols-2 auto-cols-max">
+            <section class="overflow-hidden text-gray-700  w-max ">
+                <div class="container px-2 py-2 mx-auto lg:pt-12 lg:px-32">
+                  <div class="flex flex-wrap -m-1 md:-m-2">
+                    <div class="flex flex-wrap w-1/3">
+                      <div class="w-full p-1 md:p-2">
+                        <img alt="gallery" class="block object-cover object-center w-full h-full rounded-lg"
+                          src="../assets/blue-dragon-mini-front.jpg">
+                      </div>
                     </div>
+                    <div class="flex flex-wrap w-1/3">
+                      <div class="w-full p-1 md:p-2">
+                        <img alt="gallery" class="block object-cover object-center w-full h-full rounded-lg"
+                          src="../assets/demon-front.jpg">
+                      </div>
+                    </div>
+                    <div class="flex flex-wrap w-1/3">
+                      <div class="w-full p-1 md:p-2">
+                        <img alt="gallery" class="block object-cover object-center w-full h-full rounded-lg"
+                          src="../assets/dragon-mini-front.jpg">
+                      </div>
+                    </div>
+                    <div class="flex flex-wrap w-1/3">
+                      <div class="w-full p-1 md:p-2">
+                        <img alt="gallery" class="block object-cover object-center w-full h-full rounded-lg"
+                          src="../assets/female-warrior-ghost-front.jpg">
+                      </div>
+                    </div>
+                    <div class="flex flex-wrap w-1/3">
+                      <div class="w-full p-1 md:p-2">
+                        <img alt="gallery" class="block object-cover object-center w-full h-full rounded-lg"
+                          src="../assets/large-skeleton-front.jpg">
+                      </div>
+                    </div>
+                    <div class="flex flex-wrap w-1/3">
+                      <div class="w-full p-1 md:p-2">
+                        <img alt="gallery" class="block object-cover object-center w-full h-full rounded-lg"
+                          src="../assets/male-warrior-ghost-front.jpg">
+                      </div>
+                    </div>
+                    <div class="flex flex-wrap w-1/3">
+                        <div class="w-full p-1 md:p-2">
+                          <img alt="gallery" class="block object-cover object-center w-full h-full rounded-lg"
+                            src="../assets/mini-hand-front.jpg">
+                        </div>
+                      </div>
+                      <div class="flex flex-wrap w-1/3">
+                        <div class="w-full p-1 md:p-2">
+                          <img alt="gallery" class="block object-cover object-center w-full h-full rounded-lg"
+                            src="../assets/purple-troll-front.jpg">
+                        </div>
+                      </div>
+                      <div class="flex flex-wrap w-1/3">
+                        <div class="w-full p-1 md:p-2">
+                          <img alt="gallery" class="block object-cover object-center w-full h-full rounded-lg"
+                            src="../assets/triple-snake-front.jpg">
+                        </div>
+                      </div>
+                      <div class="flex flex-wrap w-1/3">
+                        <div class="w-full p-1 md:p-2">
+                          <img alt="gallery" class="block object-cover object-center w-full h-full rounded-lg"
+                            src="../assets/warrior-front.jpg">
+                        </div>
+                      </div>
+                  </div>
                 </div>
-                <div class="gap-8 columns-2 m-1">
-                <div class="w-64 py-px-1 px-px lg:p-4">
-                <img alt="gallery" class="object-center w-64 h-64 rounded-lg"
-                  src="../assets/demon-front.jpg">
+            </section>
+
+            <section class="flex w-[30rem] flex-col space-y-10  w-max">
+                <div class="text-center text-4xl font-medium">Log In</div>
+            
+                <div
+                  class="w-full transform border-b-2 bg-transparent text-lg duration-300 focus-within:border-indigo-500"
+                >
+                  <input
+                    type="text"
+                    placeholder="Email or Username"
+                    class="w-full border-none bg-transparent outline-none placeholder:italic focus:outline-none"
+                  />
                 </div>
+            
+                <div
+                  class="w-full transform border-b-2 bg-transparent text-lg duration-300 focus-within:border-indigo-500"
+                >
+                  <input
+                    type="password"
+                    placeholder="Password"
+                    class="w-full border-none bg-transparent outline-none placeholder:italic focus:outline-none"
+                  />
                 </div>
-                <div class="gap-8 columns-2 m-1">
-              <div class="w-64 py-px-1 px-px lg:p-4">
-                <img alt="gallery" class="object-center w-64 h-64 rounded-lg"
-                  src="../assets/dragon-mini-front.jpg">
-              </div>
-                </div>
-                <div class="gap-8 columns-2 m-1">
-              <div class="w-64 py-px-1 px-px lg:p-4">
-                <img alt="gallery" class="object-center w-64 h-64 rounded-lg"
-                  src="../assets/female-warrior-ghost-front.jpg">
-              </div>
-                </div>
-            <div class="gap-8 columns-2 m-1">
-              <div class="w-64 py-px-1 px-px lg:p-4">
-                <img alt="gallery" class="object-center w-64 h-64 rounded-lg"
-                  src="../assets/large-skeleton-front.jpg">
-              </div>
-            </div>
-            <div class="gap-8 columns-2 m-1">
-              <div class="w-64 py-px-1 px-px lg:p-4">
-                <img alt="gallery" class="object-center w-64 h-64 rounded-lg"
-                  src="../assets/male-warrior-ghost-front.jpg">
-              </div>
-            </div>
-            <div class="gap-8 columns-2 m-1">
-                <div class="w-64 py-px-1 px-px lg:p-4">
-                  <img alt="gallery" class="object-center w-64 h-64 rounded-lg"
-                    src="../assets/mini-hand-front.jpg">
-                </div>
-              </div>
-              <div class="gap-8 columns-2 m-1">
-                <div class="w-64 py-px-1 px-px lg:p-4">
-                  <img alt="gallery" class="object-center w-64 h-64 rounded-lg"
-                    src="../assets/purple-troll-front.jpg">
-                </div>
-              </div>
-              <div class="gap-8 columns-2 m-1">
-                <div class="w-64 py-px-1 px-px lg:p-4">
-                  <img alt="gallery" class="object-center w-64 h-64 rounded-lg"
-                    src="../assets/triple-snake-front.jpg" >
-                </div>
-              </div>
-              <div class="gap-8 columns-2 m-1">
-                <div class="w-64 py-px-1 px-px lg:p-4">
-                  <img alt="gallery" class="object-center w-64 h-64 rounded-lg"
-                    src="../assets/warrior-front.jpg">
-                </div>
-             </div>
-            </div>
-    </section>
+            
+                <button
+                  class="transform rounded-sm bg-indigo-600 py-2 font-bold duration-300 hover:bg-blue-400"
+                >
+                  LOG IN
+                </button>
+            
+                <a
+                  href="#"
+                  class="transform text-center font-semibold text-gray-700 duration-300 hover:text-gray-300"
+                  >FORGOT PASSWORD?</a
+                >
+            
+                <p class="text-center text-lg">
+                  No account?
+                  <a
+                    href="#"
+                    class="font-medium text-indigo-500 underline-offset-4 hover:underline"
+                    >Create One</a
+                  >
+                </p>
+            </section>
+        </main>
+
+        
 
 </body>
 

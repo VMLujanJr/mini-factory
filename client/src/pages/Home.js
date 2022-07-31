@@ -3,6 +3,7 @@ import { useQuery } from '@apollo/client';
 import { QUERY_COMMENTS, QUERY_ME_BASIC } from '../utils/queries.js';
 import Auth from '../utils/auth.js';
 import MiniatureList from '../components/MiniatureList';
+import Login from './Login';
 
 const Home = () => {
     const { loading, data } = useQuery(QUERY_COMMENTS);
@@ -11,10 +12,9 @@ const Home = () => {
     const loggedIn = Auth.loggedIn();
 
     return(
-        <main>
-            <div className='flex-row justify-space-between'>
-                <MiniatureList />
-            </div>
+        <main className="container mx-auto md:container md:mx-auto grid md:grid-cols-2 md:auto-cols-max grid-cols-2 auto-cols-max">
+            <MiniatureList />
+            <Login />
         </main>
     );
 };
