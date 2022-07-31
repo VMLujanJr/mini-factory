@@ -615,6 +615,10 @@ video {
   display: grid;
 }
 
+.je{
+  justify-items: end;
+}
+
 .h-8 {
   height: 2rem;
 }
