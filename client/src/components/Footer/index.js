@@ -2,7 +2,7 @@ import React from "react"
 
 const Footer = () => {
   return (
-    <footer class=" content-between lg:text-left  text-white bg-custom-teal ">
+    <footer class=" content-between lg:text-left text-white bg-custom-teal ">
       <div class="flex justify-between items-center lg:justify-between p-6 border-b border-gray-300">
       </div>
 
@@ -21,33 +21,33 @@ const Footer = () => {
               MINI FACTORY
             </h6>
             <p>
-              This Project, While still in development, will serve as a online outlet for all things miniatuare and mighty! 
-              Regardless if it is bound for a glass case of the dangerous plains of your next table top adventure 
+              This Project, While still in development, will serve as a online outlet for all things miniatuare and mighty!
+              Regardless if it is bound for a glass case of the dangerous plains of your next table top adventure
               we are here to supply the adventure!
             </p>
           </div>
-          <div class="">
+          <div class="flex flex-column">
             <h6 class="uppercase font-semibold mb-4 flex align-items: md:justify-end text-white">
               Team Members
             </h6>
-            <p class="mb-4">
-              <a href="#!" class="text-white">Victor Lujan</a>
-            </p>
-            <p class="mb-4">
-              <a href="#!" class="text-white">Michael Tulmen</a>
-            </p>
-            <p class="mb-4">
-              <a href="#!" class="text-white">Brandon Velarde</a>
-            </p>
-            <p>
-              <a href="#!" class="text-white">Keith Yanosy</a>
-            </p>
-            <p>
-              <a href="#!" class="text-white">Camila Fernandez</a>
-            </p>
+            <div>
+              <p class="mb-4">
+                <a href="https://github.com/VMLujanJr" target='_blank' class="text-white">Victor Lujan</a>
+              </p>
+              <p class="mb-4">
+                <a href="https://github.com/Michael-Tulmen" target='_blank' class="text-white">Michael Tulmen</a>
+              </p>
+              <p class="mb-4">
+                <a href="https://github.com/BrandonDaws" target='_blank' class="text-white">Brandon Velarde</a>
+              </p>
+              <p>
+                <a href="https://github.com/KeithVIP" target='_blank' class="text-white">Keith Yanosy</a>
+              </p>
+              <p>
+                <a href="https://github.com/Camilaf99" target='_blank' class="text-white">Camila Fernandez</a>
+              </p>
+            </div>
           </div>
-         
-        
         </div>
       </div>
       <div class="text-center p-6">

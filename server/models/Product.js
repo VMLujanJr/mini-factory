@@ -21,6 +21,7 @@ const productSchema = new Schema(
             minlength: 1,
             maxlength: 12
         }
+        // Add image path field here (String)
     },
     {
         toJSON: {

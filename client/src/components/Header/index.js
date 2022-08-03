@@ -29,9 +29,9 @@ const Header = () => {
                         ) : (
                         <>
                             <div className='text-sm lg:flex-grow'>
-                                <Link to='/login' className="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4">Login</Link>
                                 <Link to='/signup' className="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4">Signup</Link>
-                                <Link to='/Profile.js' className="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white">Profile</Link>
+                                <Link to='/login' className="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4">Login</Link>
+                                <Link to='/profile' className="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white">Profile</Link>
                             </div>
                         </>
                         )

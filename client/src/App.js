@@ -17,7 +17,7 @@ import NoMatch from './pages/NoMatch';
 import SingleComment from './pages/SingleComment.js';
 import Profile from './pages/Profile.js';
 import Signup from './pages/Signup.js';
-import Hero from './components/Header/Hero';
+import Hero from './components/Hero';
 
 
 const httpLink = createHttpLink({
@@ -43,9 +43,6 @@ function App() {
   return (
     <ApolloProvider client={client}>
       {<Router>
-        <div>
-        <Hero />
-        </div>
         <div className='flex-column justify-flex-start min-100-vh'>
           
           <Header />

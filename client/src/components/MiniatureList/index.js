@@ -11,86 +11,89 @@ const MiniatureList = () => {
             productName: 'Purple Troll',
             sizeCategory: 'Large',
             price: '$30',
-            picture: '../../assets/large/0.jpg',
+            picture: '/assets/large/0.jpg',
             description: 'Large purple zombie troll',
             profile: 'tnancy2',
-        },{
+        }, {
             productName: 'Skeleton',
             sizeCategory: 'Large',
             price: '$30',
-            picture: '../../assets/large/1.jpg',
+            picture: '/assets/large/1.jpg',
             description: 'Large zombie skeleton',
             profile: 'spepe22',
-        },{
+        }, {
             productName: 'Demon',
             sizeCategory: 'Large',
             price: '$30',
-            picture: '../../assets/large/2.jpg',
+            picture: '/assets/large/2.jpg',
             description: 'Large warrior demon',
             profile: 'hihey2',
-        },{
+        }, {
             productName: 'Dragon',
             sizeCategory: 'Large',
             price: '$30',
-            picture: '../../assets/large/3.jpg',
+            picture: '/assets/large/3.jpg',
             description: 'Large blue dragon',
             profile: 'moony',
-        },{
+        }, {
             productName: 'Wizard with clear dragon',
             sizeCategory: 'Medium',
             price: '$20',
-            picture: '../../assets/medium/0.jpg',
+            picture: '/assets/medium/0.jpg',
             description: 'Blue wizard with clear dragon',
             profile: 'vicvic100',
-        },{
+        }, {
             productName: 'Female warrior',
             sizeCategory: 'Medium',
             price: '$20',
-            picture: '../../assets/medium/1.jpg',
+            picture: '/assets/medium/1.jpg',
             description: 'Blue female warrior with sword',
             profile: 'brandjs',
-        },{
+        }, {
             productName: 'Blue troll',
             sizeCategory: 'Medium',
             price: '$20',
-            picture: '../../assets/medium/2.jpg',
+            picture: '/assets/medium/2.jpg',
             description: 'Blue troll with sword',
             profile: 'michh1',
-        },{
+        }, {
             productName: 'Snake Wizard',
             sizeCategory: 'Medium',
             price: '$20',
-            picture: '../../assets/medium/3/jpg',
+            picture: '/assets/medium/3.jpg',
             description: '3 snake wizard',
             profile: 'keikei',
-        },{
+        }, {
             productName: 'Warrior',
             sizeCategory: 'Medium',
             price: '$20',
-            picture: '../../assets/medium/4.jpg',
+            picture: '/assets/medium/4.jpg',
             description: 'Male zombie warrior',
             profile: 'pants6',
-        },{
+        }, {
             productName: 'Zombie hand',
             sizeCategory: 'Small',
             price: '$10',
-            picture: '../../assets/small/0.jpg',
+            picture: '/assets/small/0.jpg',
             description: 'Zombie hand',
             profile: 'awegreat2',
         }
-    ]);
+        ]);
     }, []);
 
     const cards = miniatureList.map(e => {
-        return (<div className="flex flex-wrap w-1/3">
-            <div className="w-full p-1 md:p-2">
-                <Link to={`/profile/${e.profile}`}>
-                    <img alt={e.description} className="block object-cover object-center w-full h-full rounded-lg" src={e.picture} />
-                </Link>
-                <span>{e.productName} - {e.price}</span>
-                <span>{e.sizeCategory}</span>
+        const imagePath = process.env.PUBLIC_URL + e.picture;
+        return (
+            <div className="flex flex-wrap w-1/3">
+                <div className="w-full p-1 md:p-2">
+                    <Link to={`/profile/${e.profile}`}>
+                        <img alt={e.description} className="block object-cover object-center w-full h-full rounded-lg" src={imagePath} />
+                    </Link>
+                    <span>{e.productName} - {e.price}</span>
+                    <span>{e.sizeCategory}</span>
+                </div>
             </div>
-        </div>);
+        );
     });
 
     return (

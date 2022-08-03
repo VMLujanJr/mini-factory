@@ -11,6 +11,7 @@ const resolvers = {
           .select("-__v -password")
           .populate("comments")
           .populate("friends");
+          // add populate("products")
 
         return userData;
       }
