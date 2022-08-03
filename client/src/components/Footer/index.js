@@ -32,19 +32,19 @@ const Footer = () => {
             </h6>
             <div>
               <p className="mb-4">
-                <a href="https://github.com/VMLujanJr" target='_blank' className="text-white">Victor Lujan</a>
+                <a href="https://github.com/VMLujanJr" target='_blank' rel='noreferrer' className="text-white">Victor Lujan</a>
               </p>
               <p className="mb-4">
-                <a href="https://github.com/Michael-Tulmen" target='_blank' className="text-white">Michael Tulmen</a>
+                <a href="https://github.com/Michael-Tulmen" target='_blank' rel='noreferrer' className="text-white">Michael Tulmen</a>
               </p>
               <p className="mb-4">
-                <a href="https://github.com/BrandonDaws" target='_blank' className="text-white">Brandon Velarde</a>
+                <a href="https://github.com/BrandonDaws" target='_blank' rel='noreferrer' className="text-white">Brandon Velarde</a>
               </p>
               <p>
-                <a href="https://github.com/KeithVIP" target='_blank' className="text-white">Keith Yanosy</a>
+                <a href="https://github.com/KeithVIP" target='_blank' rel='noreferrer' className="text-white">Keith Yanosy</a>
               </p>
               <p>
-                <a href="https://github.com/Camilaf99" target='_blank' className="text-white">Camila Fernandez</a>
+                <a href="https://github.com/Camilaf99" target='_blank' rel='noreferrer' className="text-white">Camila Fernandez</a>
               </p>
             </div>
           </div>

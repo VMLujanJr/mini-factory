@@ -5,6 +5,7 @@ import Auth from '../utils/auth.js';
 
 const Signup = () => {
     const [formState, setFormState] = useState({ username: '', email: '', password: '' });
+    const [addUser, {error }] = useMutation(ADD_USER);
     const handleChange = (event) => {
         const { name, value } = event.target;
         
@@ -13,7 +14,7 @@ const Signup = () => {
             [name]: value,
         });
     };
-    const [addUser, { error }] = useMutation(ADD_USER);
+    // const [addUser, { error }] = useMutation(ADD_USER);
     const handleFormSubmit = async (event) => {
         event.preventDefault();
         try {
@@ -29,12 +30,12 @@ const Signup = () => {
     };
 
     return(
-        <section className="flex w-[30rem] flex-col space-y-10 m-3">
-            <div className="text-center text-4xl font-medium">Signup</div>
-            <div className="w-full transform border-b-2 bg-transparent text-lg duration-300 focus-within:border-indigo-500">
+        <section className="flex flex-col w-[30rem] space-y-10 m-3">
+            <div className="flex text-center text-4xl font-medium justify-center">Signup</div>
+            <div className="gap-4 w-full transform border-b-2 bg-transparent text-lg duration-300 focus-within:border-indigo-500">
                 <form onSubmit={handleFormSubmit}>
                     <input
-                        className="w-full border-none bg-transparent outline-none placeholder:italic focus:outline-none"
+                        className="w-full m-3 border-none bg-transparent outline-none placeholder:italic focus:outline-none"
                         placeholder="Username" 
                         name='username'
                         type='username'
@@ -43,7 +44,7 @@ const Signup = () => {
                         onChange={ handleChange }
                     />
                     <input
-                        className="w-full border-none bg-transparent outline-none placeholder:italic focus:outline-none"
+                        className="w-full m-3 border-none bg-transparent outline-none placeholder:italic focus:outline-none"
                         placeholder="Email" 
                         name="email"
                         type="email"
@@ -52,7 +53,7 @@ const Signup = () => {
                         onChange={ handleChange }
                     />
                     <input
-                        className="w-full border-none bg-transparent outline-none placeholder:italic focus:outline-none"
+                        className="w-full m-3 border-none bg-transparent outline-none placeholder:italic focus:outline-none"
                         placeholder="******" 
                         name="password"
                         type="password"
