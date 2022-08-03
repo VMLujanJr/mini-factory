@@ -31,6 +31,7 @@ const userSchema = new Schema(
                 ref: 'User'
             }
         ]
+        // Add products array
     },
     {
         toJSON: {
