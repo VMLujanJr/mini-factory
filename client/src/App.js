@@ -42,11 +42,10 @@ const client = new ApolloClient({
 function App() {
   return (
     <ApolloProvider client={client}>
-      {<Router>
+      <Router>
         <div className='flex-column justify-flex-start min-100-vh'>
-          
           <Header />
-          <div className=''>
+          <div>
             <Routes>
               <Route
                 path='/'
@@ -65,10 +64,6 @@ function App() {
                 <Route path='' element={<Profile />} />
               </Route>
               <Route
-                path='/comment/:id'
-                element={<SingleComment />}
-              />
-              <Route
                 path='*'
                 element={<NoMatch />}
               />
@@ -76,7 +71,7 @@ function App() {
           </div>
           <Footer />
         </div>
-      </Router>}
+      </Router>
     </ApolloProvider>
   );
 };
