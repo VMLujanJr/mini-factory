@@ -2,7 +2,7 @@ import React from "react"
 
 const Footer = () => {
   return (
-    <footer class=" content-between lg:text-left  text-white bg-custom-teal ">
+    <footer class=" content-between lg:text-left  text-white bg-custom-teal">
       <div class="flex justify-between items-center lg:justify-between p-6 border-b border-gray-300">
       </div>
 

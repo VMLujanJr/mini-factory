@@ -14,7 +14,6 @@ const Home = () => {
     return(
         <main className="container mx-auto md:container md:mx-auto grid md:grid-cols-2 md:auto-cols-max grid-cols-2 auto-cols-max">
             <MiniatureList />
-            <Login />
         </main>
     );
 };
