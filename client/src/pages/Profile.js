@@ -210,4 +210,5 @@ Alternatively if you want to just have a single hero
 </html>
     )
 }
+
 export default Profile;
