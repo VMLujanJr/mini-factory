@@ -36,20 +36,11 @@ const Signup = () => {
                 <form onSubmit={handleFormSubmit} className='flex flex-col justify-center'>
                     <input
                         className="w-full m-3 border-none bg-transparent outline-none placeholder:italic focus:outline-none"
-                        placeholder="Username" 
+                        placeholder="Email or Username" 
                         name='username'
                         type='username'
                         id='username'
                         value={formState.username}
-                        onChange={handleChange}
-                    />
-                    <input
-                        className="w-full m-3 border-none bg-transparent outline-none placeholder:italic focus:outline-none"
-                        placeholder="Email" 
-                        name="email"
-                        type="email"
-                        id="email"
-                        value={formState.email}
                         onChange={handleChange}
                     />
                     <input
@@ -61,7 +52,7 @@ const Signup = () => {
                         value={formState.password}
                         onChange={handleChange}
                     />
-                    <button className="transform rounded-sm bg-indigo-600 py-2 font-bold duration-300 hover:bg-blue-400">SIGN UP</button>
+                    <button className="transform rounded-sm bg-indigo-600 py-2 px-4 font-bold duration-300 hover:bg-blue-400">SIGN UP</button>
                 </form>
                 { error && <div>Sign up failed</div> }
             </div>
