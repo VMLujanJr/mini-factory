@@ -36,20 +36,11 @@ const Signup = () => {
                 <form onSubmit={handleFormSubmit}>
                     <input
                         className="w-full m-3 border-none bg-transparent outline-none placeholder:italic focus:outline-none"
-                        placeholder="Username" 
+                        placeholder="Email or Username" 
                         name='username'
                         type='username'
                         id='username'
                         value={ formState.username }
-                        onChange={ handleChange }
-                    />
-                    <input
-                        className="w-full m-3 border-none bg-transparent outline-none placeholder:italic focus:outline-none"
-                        placeholder="Email" 
-                        name="email"
-                        type="email"
-                        id="email"
-                        value={ formState.email }
                         onChange={ handleChange }
                     />
                     <input
