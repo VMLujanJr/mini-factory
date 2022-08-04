@@ -15,9 +15,9 @@ module.exports = {
       teal: colors.teal,
       blue: colors.blue,
       'custom-teal': '#2b6777',
-      'custom-blue': '#1e40af',
+      'custom-blue': '#3b82f6',
       'custom-white': '#c7d2fe',
-      'custom-gray': '#71717a',
+      'custom-gray': '#64748b',
       'custom-aqua': '#52ab98'
     },
 
