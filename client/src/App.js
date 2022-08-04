@@ -19,7 +19,6 @@ import NoMatch from './pages/NoMatch';
 import Profile from './pages/Profile.js';
 import Signup from './pages/Signup.js';
 
-
 const httpLink = createHttpLink({
   uri: '/graphql',
 });

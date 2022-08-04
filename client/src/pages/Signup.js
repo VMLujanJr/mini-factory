@@ -33,7 +33,7 @@ const Signup = () => {
         <section className="flex flex-col w-[30rem] space-y-10 m-3">
             <div className="flex text-center text-4xl font-medium justify-center">Signup</div>
             <div className="gap-4 w-full transform border-b-2 bg-transparent text-lg duration-300 focus-within:border-indigo-500">
-                <form onSubmit={handleFormSubmit}>
+                <form onSubmit={handleFormSubmit} className='flex flex-col justify-center'>
                     <input
                         className="w-full m-3 border-none bg-transparent outline-none placeholder:italic focus:outline-none"
                         placeholder="Username" 
