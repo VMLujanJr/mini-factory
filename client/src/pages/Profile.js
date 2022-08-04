@@ -6,7 +6,7 @@ const Profile = () => {
             <section className="bg-custom-aqua py-8">
                 <div className="container py-8 px-6 mx-auto">
                     <h3 className="text-custom-white uppercase tracking-wide no-underline hover:no-underline font-bold  text-xl mb-8">
-                        (User's Name Goes Here)'s Page!'
+                        Brandon's Page!'
                     </h3>
                     <p className="text-custom-white mt-8 mb-8">
                         Welcome to My Page! Checkout my Mini's and let me know if anything peaks
@@ -23,20 +23,39 @@ const Profile = () => {
                             Current Mini's on Deck:
                         </h1>
                     </div>
-                    <div className="container px-5 py-2 mx-auto lg:pt-12 lg:px-32">
+                </div>
+            </section>
+            <section className="bg-custom-aqua py-8">
+                <div className="container mx-auto flex items-center flex-wrap pt-4 pb-12">
+                    <nav id="store" className="w-full z-30 top-0 px-6 py-1">
+                        <div className="w-full container mx-auto flex flex-wrap items-center justify-between mt-0 px-2 py-3">
+                            <div
+                                className="uppercase tracking-wide no-underline hover:no-underline font-bold text-custom-white text-xl"
+                            >
+                                Store
+                            </div>
+                            <div className="flex items-center" id="store-nav-content">
+                                <div
+                                    className="pl-3 inline-block no-underline hover:text-black">
+                                  
+                                </div>
+                                <div
+                                    className="pl-3 inline-block no-underline hover:text-black"
+                                >
+                                   
+                                </div>
+                            </div>
+                        </div>
+                    </nav>
+                    <div className="w-full md:w-1/3 xl:w-1/4 p-6 flex flex-col">
                         <div>
                             <img
-                                className="flex flex-wrap mt-10-m-1 md:-m-2"
-                                src="https://images.unsplash.com/photo-1555982105-d25af4182e4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=400&h=400&q=80"
+                                className="hover:grow hover:shadow-lg"
+                                src="../../assets/small/0.jpg"
                                 alt='my miniature'
                             />
                             <div className="pt-3 flex text-custom-white items-center justify-between">
                                 <p className="">Product Name</p>
-                                <img
-                                    className="h-6 w-6 fill-current text-gray-500 hover:text-black"
-                                    src="../../assets/demon-back.jpg"
-                                    alt='my miniature'
-                                />
                             </div>
                             <p className="pt-1 text-custom-white">$9.99</p>
                         </div>
@@ -44,17 +63,69 @@ const Profile = () => {
                     <div className="w-full md:w-1/3 xl:w-1/4 p-6 flex flex-col">
                         <div>
                             <img
-                                className="hover:grow py-3 px-3hover:shadow-lg"
-                                src="https://images.unsplash.com/photo-1508423134147-addf71308178?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=400&h=400&q=80"
+                                className="hover:grow hover:shadow-lg"
+                                src="../../assets/medium/0.jpg"
                                 alt=""
                             />
                             <div className="pt-3 flex text-custom-white items-center justify-between">
-                                <p className="">Muh</p>
-                                <img
-                                    className="h-6 w-6 fill-current text-gray-500 hover:text-black"
-                                    src="../../assets/demon-back.jpg"
-                                    alt=""
-                                />
+                                <p className="">Product Name</p>
+                             
+                            </div>
+                            <p className="pt-1 text-custom-white">£9.99</p>
+                        </div>
+                    </div>
+                    <div className="w-full md:w-1/3 xl:w-1/4 p-6 flex flex-col">
+                        <div>
+                            <img
+                                className="hover:grow hover:shadow-lg"
+                                src="../../assets/medium/0.jpg"
+                                alt=""
+                            />
+                            <div className="pt-3 flex text-custom-white items-center justify-between">
+                                <p className="">Product Name</p>
+                             
+                            </div>
+                            <p className="pt-1 text-custom-white">£9.99</p>
+                        </div>
+                    </div>
+                    <div className="w-full md:w-1/3 xl:w-1/4 p-6 flex flex-col">
+                        <div>
+                            <img
+                                className="hover:grow hover:shadow-lg"
+                                src="../../assets/medium/4.jpg"
+                                alt=""
+                            />
+                            <div className="pt-3 flex text-custom-white items-center justify-between">
+                                <p className="">Product Name</p>
+                             
+                            </div>
+                            <p className="pt-1 text-custom-white">£9.99</p>
+                        </div>
+                    </div>
+                    <div className="w-full md:w-1/3 xl:w-1/4 p-6 flex flex-col">
+                        <div>
+                            <img
+                                className="hover:grow hover:shadow-lg"
+                                src="../../assets/large/2.jpg"
+                                alt=""
+                            />
+                            <div className="pt-3 flex text-custom-white items-center justify-between">
+                                <p className="">Product Name</p>
+                             
+                            </div>
+                            <p className="pt-1 text-custom-white">£9.99</p>
+                        </div>
+                    </div>
+                    <div className="w-full md:w-1/3 xl:w-1/4 p-6 flex flex-col">
+                        <div>
+                            <img
+                                className="hover:grow hover:shadow-lg"
+                                src="../../assets/medium/1.jpg"
+                                alt=""
+                            />
+                            <div className="pt-3 flex text-custom-white items-center justify-between">
+                                <p className="">Product Name</p>
+                             
                             </div>
                             <p className="pt-1 text-custom-white">$9.99</p>
                         </div>
@@ -62,6 +133,7 @@ const Profile = () => {
                 </div>
             </section>
         </>
+
     )
 };
 

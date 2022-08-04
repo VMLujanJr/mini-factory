@@ -11,6 +11,7 @@ const Header = () => {
     };
 
     return (
+        
         <header>
             <div className="flex items-center justify-between flex-wrap bg-custom-teal p-6">
                 <Link to='/' className="flex items-center flex-shrink-0 text-white mr-6">
