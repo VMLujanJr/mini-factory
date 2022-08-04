@@ -84,13 +84,13 @@ const MiniatureList = () => {
     const cards = miniatureList.map(e => {
         const imagePath = process.env.PUBLIC_URL + e.picture;
         return (
-            <div className="flex flex-wrap w-1/3">
-                <div className="w-full p-1 md:p-2">
-                    <Link to={`/profile/${e.profile}`}>
+            <div className="flex flex-wrap w-1/5 pb-3 md:pb-3">
+                <div className="w-full p-5 md:p-10 text-center">
+                    <Link to={`./profile/${e.profile}`}>
                         <img alt={e.description} className="block object-cover object-center w-full h-full rounded-lg" src={imagePath} />
                     </Link>
-                    <span>{e.productName} - {e.price}</span>
-                    <span>{e.sizeCategory}</span>
+                    <span className='font-mono'>{e.productName} - {e.price}</span><br />
+                    <span className='font-mono'>{e.sizeCategory}</span>
                 </div>
             </div>
         );

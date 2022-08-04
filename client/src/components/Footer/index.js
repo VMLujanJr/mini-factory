@@ -2,17 +2,17 @@ import React from "react"
 
 const Footer = () => {
   return (
-    <footer class=" content-between lg:text-left text-white bg-custom-teal ">
-      <div class="flex justify-between items-center lg:justify-between p-6 border-b border-gray-300">
+    <footer className=" content-between lg:text-left text-white bg-custom-teal ">
+      <div className="flex justify-between items-center lg:justify-between p-6 border-b border-gray-300">
       </div>
 
-      <div class="mx-6 py-10 text-center md:text-left">
-        <div class="grid grid-1 je md:grid-cols-2 lg:grid-cols-2 gap-8">
-          <div class="">
-            <h6 class="uppercase font-semibold mb-4 flex items-center justify-end md:justify-end 
+      <div className="mx-6 py-10 text-center md:text-left">
+        <div className="grid grid-1 je md:grid-cols-2 lg:grid-cols-2 gap-8">
+          <div className="">
+            <h6 className="uppercase font-semibold mb-4 flex items-center justify-end md:justify-end 
           ">
               <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="cubes"
-                class="w-4 mr-3" role="img" xmlns="http://www.w3.org/2000/svg"
+                className="w-4 mr-3" role="img" xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 512 512">
                 <path fill="currentColor"
                   d="M488.6 250.2L392 214V105.5c0-15-9.3-28.4-23.4-33.7l-100-37.5c-8.1-3.1-17.1-3.1-25.3 0l-100 37.5c-14.1 5.3-23.4 18.7-23.4 33.7V214l-96.6 36.2C9.3 255.5 0 268.9 0 283.9V394c0 13.6 7.7 26.1 19.9 32.2l100 50c10.1 5.1 22.1 5.1 32.2 0l103.9-52 103.9 52c10.1 5.1 22.1 5.1 32.2 0l100-50c12.2-6.1 19.9-18.6 19.9-32.2V283.9c0-15-9.3-28.4-23.4-33.7zM358 214.8l-85 31.9v-68.2l85-37v73.3zM154 104.1l102-38.2 102 38.2v.6l-102 41.4-102-41.4v-.6zm84 291.1l-85 42.5v-79.1l85-38.8v75.4zm0-112l-102 41.4-102-41.4v-.6l102-38.2 102 38.2v.6zm240 112l-85 42.5v-79.1l85-38.8v75.4zm0-112l-102 41.4-102-41.4v-.6l102-38.2 102 38.2v.6z">
@@ -26,33 +26,32 @@ const Footer = () => {
               we are here to supply the adventure!
             </p>
           </div>
-          <div class="flex flex-column">
-            <h6 class="uppercase font-semibold mb-4 flex align-items: md:justify-end text-white">
+          <div className="flex flex-column">
+            <h6 className="uppercase font-semibold mb-4 flex align-items: md:justify-end text-white">
               Team Members
             </h6>
             <div>
-              <p class="mb-4">
-                <a href="https://github.com/VMLujanJr" target='_blank' class="text-white">Victor Lujan</a>
+              <p className="mb-4">
+                <a href="https://github.com/VMLujanJr" target='_blank' rel='noreferrer' className="text-white">Victor Lujan</a>
               </p>
-              <p class="mb-4">
-                <a href="https://github.com/Michael-Tulmen" target='_blank' class="text-white">Michael Tulmen</a>
+              <p className="mb-4">
+                <a href="https://github.com/Michael-Tulmen" target='_blank' rel='noreferrer' className="text-white">Michael Tulmen</a>
               </p>
-              <p class="mb-4">
-                <a href="https://github.com/BrandonDaws" target='_blank' class="text-white">Brandon Velarde</a>
-              </p>
-              <p>
-                <a href="https://github.com/KeithVIP" target='_blank' class="text-white">Keith Yanosy</a>
+              <p className="mb-4">
+                <a href="https://github.com/BrandonDaws" target='_blank' rel='noreferrer' className="text-white">Brandon Velarde</a>
               </p>
               <p>
-                <a href="https://github.com/Camilaf99" target='_blank' class="text-white">Camila Fernandez</a>
+                <a href="https://github.com/KeithVIP" target='_blank' rel='noreferrer' className="text-white">Keith Yanosy</a>
+              </p>
+              <p>
+                <a href="https://github.com/Camilaf99" target='_blank' rel='noreferrer' className="text-white">Camila Fernandez</a>
               </p>
             </div>
           </div>
         </div>
       </div>
-      <div class="text-center p-6">
-        <span>© 2022 Copyright:</span>
-        <a class="text-white font-semibold" href="https://tailwind-elements.com/">Tailwind Elements</a>
+      <div className="text-center p-6">
+        <span>© 2022 Copyright</span>
       </div>
     </footer>
 

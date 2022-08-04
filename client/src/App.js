@@ -1,5 +1,9 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route
+} from 'react-router-dom';
 import {
   ApolloProvider,
   ApolloClient,
@@ -7,17 +11,13 @@ import {
   createHttpLink
 } from '@apollo/client';
 import { setContext } from '@apollo/client/link/context';
-
 import Header from './components/Header';
 import Footer from './components/Footer';
-
 import Home from './pages/Home.js';
 import Login from './pages/Login.js';
 import NoMatch from './pages/NoMatch';
-import SingleComment from './pages/SingleComment.js';
 import Profile from './pages/Profile.js';
 import Signup from './pages/Signup.js';
-import Hero from './components/Hero';
 
 
 const httpLink = createHttpLink({
@@ -41,12 +41,11 @@ const client = new ApolloClient({
 
 function App() {
   return (
-    <ApolloProvider client={client}>
-      {<Router>
+    <ApolloProvider client={ client }>
+      <Router>
         <div className='flex-column justify-flex-start min-100-vh'>
-          <Hero />
           <Header />
-          <div className=''>
+          <div className='flex justify-center min-h-screen'>
             <Routes>
               <Route
                 path='/'
@@ -65,10 +64,6 @@ function App() {
                 <Route path='' element={<Profile />} />
               </Route>
               <Route
-                path='/comment/:id'
-                element={<SingleComment />}
-              />
-              <Route
                 path='*'
                 element={<NoMatch />}
               />
@@ -76,7 +71,7 @@ function App() {
           </div>
           <Footer />
         </div>
-      </Router>}
+      </Router>
     </ApolloProvider>
   );
 };
