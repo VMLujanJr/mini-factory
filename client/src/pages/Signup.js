@@ -62,6 +62,7 @@ const Signup = () => {
                         onChange={ handleChange }
                     />
                 </form>
+                { error && <div>Sign up failed</div> }
             </div>
             <button className="transform rounded-sm bg-indigo-600 py-2 font-bold duration-300 hover:bg-blue-400">SIGN UP</button>
         </section>
