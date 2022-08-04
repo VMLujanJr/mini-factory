@@ -5,7 +5,7 @@ import Auth from '../utils/auth.js';
 
 const Signup = () => {
     const [formState, setFormState] = useState({ username: '', email: '', password: '' });
-    const [addUser, {error }] = useMutation(ADD_USER);
+    const [addUser, { error }] = useMutation(ADD_USER);
     const handleChange = (event) => {
         const { name, value } = event.target;
         
@@ -40,8 +40,8 @@ const Signup = () => {
                         name='username'
                         type='username'
                         id='username'
-                        value={ formState.username }
-                        onChange={ handleChange }
+                        value={formState.username}
+                        onChange={handleChange}
                     />
                     <input
                         className="w-full m-3 border-none bg-transparent outline-none placeholder:italic focus:outline-none"
@@ -49,12 +49,13 @@ const Signup = () => {
                         name="password"
                         type="password"
                         id="password"
-                        value={ formState.password }
-                        onChange={ handleChange }
+                        value={formState.password}
+                        onChange={handleChange}
                     />
+                    <button className="transform rounded-sm bg-indigo-600 py-2 px-4 font-bold duration-300 hover:bg-blue-400">SIGN UP</button>
                 </form>
+                { error && <div>Sign up failed</div> }
             </div>
-            <button className="transform rounded-sm bg-indigo-600 py-2 font-bold duration-300 hover:bg-blue-400">SIGN UP</button>
         </section>
     );
 };

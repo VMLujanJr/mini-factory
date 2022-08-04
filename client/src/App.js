@@ -18,8 +18,6 @@ import Login from './pages/Login.js';
 import NoMatch from './pages/NoMatch';
 import Profile from './pages/Profile.js';
 import Signup from './pages/Signup.js';
-import Hero from './components/Hero';
-import SingleComment from './pages/SingleComment.js';
 
 
 const httpLink = createHttpLink({

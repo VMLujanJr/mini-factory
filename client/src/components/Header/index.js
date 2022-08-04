@@ -21,8 +21,8 @@ const Header = () => {
                 <nav className='w-full block flex-grow lg:flex lg:items-center lg:w-auto'>
                     { Auth.loggedIn() ? (
                         <>
-                            <Link to='/profile'>Me</Link>
-                            <a href='/' onClick={ logout }>
+                            <Link to='/profile' className="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4">Me</Link>
+                            <a href='/' onClick={ logout } className="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4">
                                 Logout
                             </a>
                         </>
@@ -31,7 +31,7 @@ const Header = () => {
                             <div className='text-sm lg:flex-grow'>
                                 <Link to='/signup' className="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4">Signup</Link>
                                 <Link to='/login' className="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4">Login</Link>
-                                <Link to='/profile' className="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white">Profile</Link>
+                                <Link to='/profile' className="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4">Profile</Link>
                             </div>
                         </>
                         )
