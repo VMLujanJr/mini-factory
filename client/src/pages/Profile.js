@@ -18,7 +18,7 @@ const Profile = () => {
                 className="w-full mx-auto bg-slate-100 text-black flex pt-12 md:pt-0 md:items-center bg-cover bg-right"
                 style={{ maxWidth: 1600, height: "32rem" }}>
                 <div className="container mx-auto">
-                    <div className="flex flex-col w-full lg:w-1/2 justify-center items-start  px-6 tracking-wide">
+                    <div className="flex flex-col w-full lg:w-1/2 justify-center items-start px-6 tracking-wide">
                         <h1 className="text-custom white text-2xl my-4">
                             Current Mini's on Deck:
                         </h1>
